@@ -1,0 +1,134 @@
+:root {
+    --primary: #57b3bd;
+    --secondary: #ff694e;
+    --background: #f2f2f5;
+    --button: #3399fd;
+    --text: #272f3a;
+    --inactive: #a4a9b4;
+    --stroke: #E6E9F0;
+}
+
+@font-face {
+    font-family: Aeonik;
+    src: url(assets/fonts/Aeonik-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Aeonik;
+    src: url(assets/fonts/Aeonik-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Aeonik;
+    src: url(assets/fonts/Aeonik-Light.ttf);
+    font-weight: 200;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--background);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: Aeonik, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    color: var(--text);
+}
+
+p {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--text);
+
+}
+
+a {
+    /* Display */
+    padding: 18px 50px;
+    width: fit-content;
+
+    /* Style */
+    border-radius: 12px;
+    background-color: var(--button);
+    box-shadow: 0 8px 16px rgba(51, 153, 253, 32%);
+
+    /* Typography */
+    font-family: Aeonik, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    text-decoration: none;
+    color: #fff;
+}
+
+#content {
+    max-width: 660px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+#ctas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#keypress-indicator {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+#keypress-indicator {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+#keypress-indicator img {
+    width: 10px;
+}
+
+
+/*  Mobile Optimisation  */
+@media only screen and (max-width: 600px) {
+
+    body {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+}
