@@ -39,15 +39,17 @@ function previousQuestion() {
 
 $('#extension-options input[type="radio"').on("click", function () {
     userSelection.extension = this.value;
-    console.log(userSelection)
+    localStorage.setItem("extension", userSelection.extension);
 })
 
 $('#size-options input[type="radio"').on("click", function () {
     userSelection.size = this.value;
-    console.log(userSelection)
+    localStorage.setItem("size", userSelection.size);
 })
 
 $('#finish-options input[type="radio"').on("click", function () {
     userSelection.finish = this.value;
-    console.log(userSelection)
+    localStorage.setItem("finish", userSelection.finish);
 })
+
+$("#extension_value").text(localStorage.getItem("finish"))
