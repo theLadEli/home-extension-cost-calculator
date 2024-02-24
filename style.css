@@ -217,11 +217,19 @@ a {
     color: var(--button);
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
 
 .form-btn-primary {
     /* Layout */
-    padding: 18px 50px;
-    align-self: flex-end;
+    padding: 16px 50px;
+    width: fit-content;
+    align-self: flex-end    ;
 
     /* Style */
     border-radius: 12px;
