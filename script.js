@@ -51,5 +51,3 @@ $('#finish-options input[type="radio"').on("click", function () {
     userSelection.finish = this.value;
     localStorage.setItem("finish", userSelection.finish);
 })
-
-$("#extension_value").text(localStorage.getItem("finish"))
