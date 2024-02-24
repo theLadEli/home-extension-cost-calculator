@@ -151,7 +151,7 @@ a {
     gap: 30px;
 }
 
-#intro {
+.question-intro {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,14 +160,14 @@ a {
     text-align: center;
 }
 
-#progress-bar {
+.progress-bar {
     background: #fff;
     width: 100%;
     height: 10px;
     border-radius: 20px;
 }
 
-#progress {
+.progress {
     height: 10px;
     width: 168.67;
     background: var(--button);
@@ -177,13 +177,15 @@ a {
 
 #extension-options {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns */
+    grid-template-rows: repeat(2, 1fr);
+    /* 2 rows */
     gap: 20px;
     border: none;
 }
 
-.option {
+.option-grid-item {
     /* Layout */
     display: flex;
     flex-direction: column;
@@ -198,15 +200,15 @@ a {
     border-radius: 12px;
 }
 
-.option:hover {
+.option-grid-item:hover {
     cursor: pointer;
 }
 
-.option img {
+.option-grid-item img {
     height: 60px;
 }
 
-.opt-title {
+.option-grid-item .opt-title {
     color: #000;
     text-align: center;
     font-family: Aeonik;
@@ -216,7 +218,7 @@ a {
     line-height: 24px;
 }
 
-.opt-subtitle {
+.option-grid-item .opt-subtitle {
     color: var(--inactive);
     text-align: center;
     font-family: Aeonik;
@@ -226,7 +228,7 @@ a {
     line-height: 12px;
 }
 
-.opt-text {
+.option-grid-item .opt-text {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -234,12 +236,12 @@ a {
     gap: 4px;
 }
 
-.option input[type="radio"] {
+.option-grid-item input[type="radio"] {
     /* Hide the radio */
     display: none;
 }
 
-.option input[type="radio"]:checked~.opt-text .opt-title {
+.option-grid-item input[type="radio"]:checked~.opt-text .opt-title {
     color: var(--button);
 }
 
@@ -247,11 +249,11 @@ a {
     /* Layout */
     padding: 16px 50px;
     width: fit-content;
-    align-self: flex-end    ;
+    align-self: flex-end;
 
     /* Style */
     border-radius: 12px;
-    background: var(--Brand-Primary, #3399FD);
+    background: var(--button);
     box-shadow: 0px 0px 8px 0px rgba(51, 153, 253, 0.24);
     border: none;
     cursor: pointer;
@@ -264,6 +266,95 @@ a {
     font-style: normal;
     font-weight: 700;
     line-height: 20px;
+}
+
+.form-btn-secondary {
+    /* Layout */
+    padding: 16px 50px;
+    width: fit-content;
+    align-self: flex-end;
+
+    /* Style */
+    border-radius: 12px;
+    background: var();
+    border: solid 3px var(--button);
+    cursor: pointer;
+
+    /* Typography */
+    color: var(--button);
+    text-align: center;
+    font-family: Aeonik;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.question {
+    display: none;
+}
+
+.active {
+    display: flex;
+}
+
+#size-options {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.option-row-item {
+    /* Layout */
+    padding: 18px 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
+    /* Style */
+    background: white;
+    border-radius: 12px;
+    border: solid 1px var(--stroke);
+}
+
+.option-row-item .opt-title {
+    color: var(--text);
+    font-family: Aeonik;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.option-row-item .opt-subtitle {
+    color: var(--inactive);
+    text-align: right;
+    font-family: Aeonik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.form-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.option-row-item .opt-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+#finish-options {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 /*  Mobile Optimisation  */

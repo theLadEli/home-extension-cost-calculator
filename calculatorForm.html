@@ -30,22 +30,22 @@
 
     <div id="right-col">
 
-        <section id="question-1" class="inner-content">
+        <section id="question-1" class="inner-content question active">
 
-            <div id="intro">
+            <div class="question-intro">
                 <h1>Start Your Vision</h1>
                 <p>Choose the extension type that best embodies your aspirations.</p>
             </div>
 
-            <div id="progress-bar">
-                <div id="progress">
+            <div class="progress-bar">
+                <div class="progress">
 
                 </div>
             </div>
 
             <fieldset id="extension-options">
 
-                <label class="option">
+                <label class="option-grid-item">
                     <input type="radio" name="extension" value="single_story_side" />
                     <img src="assets/single-storey-side.svg">
                     <div class="opt-text">
@@ -54,7 +54,7 @@
                     </div>
                 </label>
 
-                <label class="option">
+                <label class="option-grid-item">
                     <input type="radio" name="extension" value="double_story_side" />
                     <img src="assets/double-storey-side.svg">
                     <div class="opt-text">
@@ -63,7 +63,7 @@
                     </div>
                 </label>
 
-                <label class="option">
+                <label class="option-grid-item">
                     <input type="radio" name="extension" value="single_story_rear" />
                     <img src="assets/single-storey-rear.svg">
                     <div class="opt-text">
@@ -72,7 +72,7 @@
                     </div>
                 </label>
 
-                <label class="option">
+                <label class="option-grid-item">
                     <input type="radio" name="extension" value="double_story_rear" />
                     <img src="assets/double-storey-rear.svg">
                     <div class="opt-text">
@@ -81,7 +81,7 @@
                     </div>
                 </label>
 
-                <label class="option">
+                <label class="option-grid-item">
                     <input type="radio" name="extension" value="loft-conversion" />
                     <img src="assets/loft-conversion.svg">
                     <div class="opt-text">
@@ -89,7 +89,7 @@
                     </div>
                 </label>
 
-                <label class="option">
+                <label class="option-grid-item">
                     <input type="radio" name="extension" value="basement" />
                     <img src="assets/basement.svg">
                     <div class="opt-text">
@@ -102,6 +102,106 @@
             <button class="form-btn-primary form-next" onclick="nextQuestion()">Next</button>
         </section>
 
+        <section id="question-2" class="inner-content question">
+
+            <div class="question-intro">
+                <h1>Select Project Size</h1>
+                <p>Choose the extension type that best embodies your aspirations.</p>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress">
+
+                </div>
+            </div>
+
+            <fieldset id="size-options">
+
+                <label class="option-row-item">
+                    <input type="radio" name="size" value="small_30sqm" />
+
+                        <span class="opt-title">Small</span>
+                        <span class="opt-subtitle">(30 sqm)</span>
+
+                </label>
+
+                <label class="option-row-item">
+                    <input type="radio" name="size" value="medium_45sqm" />
+                        <span class="opt-title">Medium</span>
+                        <span class="opt-subtitle">(45 sqm)</span>
+                </label>
+
+                <label class="option-row-item">
+                    <input type="radio" name="size" value="large_60sqm" />
+
+                        <span class="opt-title">Large</span>
+                        <span class="opt-subtitle">(60 sqm)</span>
+
+                </label>
+
+                <label class="option-row-item">
+                    <input type="radio" name="size" value="extra_large_100sqm" />
+                        <span class="opt-title">Extra Large</span>
+                        <span class="opt-subtitle">(100 sqm)</span>
+                </label>
+
+            </fieldset>
+
+            <div class="form-btns">            
+                <button class="form-btn-secondary" onclick="previousQuestion()">Back</button>
+
+                <button class="form-btn-primary" onclick="nextQuestion()">Next</button>
+            </div>
+        </section>
+
+        <section id="question-3" class="inner-content question">
+
+            <div class="question-intro">
+                <h1>Select Your Desired Finish</h1>
+                <p>This helps predict the extensiveness of your project based on your desired level of finish.</p>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress">
+
+                </div>
+            </div>
+
+            <fieldset id="finish-options">
+
+                <label class="option-row-item">
+                    <input type="radio" name="finish" value="budget" />
+                        <div class="opt-text">
+                            <span class="opt-title">Budget</span>
+                            <span class="opt-subtitle">Focuses on affordability and functionality.</span>
+                        </div>
+                </label>
+
+                <label class="option-row-item">
+                    <input type="radio" name="finish" value="standard" />
+                        <div class="opt-text">
+                            <span class="opt-title">Standard</span>
+                            <span class="opt-subtitle">Aims for a balance between value and quality.</span>
+                        </div>
+                </label>
+
+                <label class="option-row-item">
+                    <input type="radio" name="finish" value="standard" />
+                        <div class="opt-text">
+                            <span class="opt-title">Premium</span>
+                            <span class="opt-subtitle">Prioritizes premium materials and high-quality finishes.</span>
+                        </div>
+                </label>
+                
+            </fieldset>
+
+            <div class="form-btns">            
+                <button class="form-btn-secondary" onclick="previousQuestion()">Back</button>
+
+                <a href="calculationResults.html" class="form-btn-primary">Submit</a>
+            </div>
+        </section>
+    
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
