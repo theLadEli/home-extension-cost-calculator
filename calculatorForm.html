@@ -29,14 +29,19 @@
     </div>
 
     <div id="right-col">
-        <h1>Start Your Vision</h1>
-        <p>Choose the extension type that best embodies your aspirations.</p>
 
-        <div id="progress-bar">
+        <section id="question-1" class="inner-content">
 
-        </div>
+            <div id="intro">
+                <h1>Start Your Vision</h1>
+                <p>Choose the extension type that best embodies your aspirations.</p>
+            </div>
 
-        <form action="">
+            <div id="progress-bar">
+                <div id="progress">
+
+                </div>
+            </div>
 
             <fieldset id="extension-options">
 
@@ -94,12 +99,13 @@
 
             </fieldset>
 
-            <input type="submit" value="Next" class="form-btn-primary">
+            <button class="form-btn-primary form-next" onclick="nextQuestion()">Next</button>
+        </section>
 
-        </form>
     </div>
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
