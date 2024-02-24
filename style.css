@@ -31,7 +31,7 @@
     padding: 0;
 }
 
-body {
+#intro-body {
     background: var(--background);
     display: flex;
     flex-direction: row;
@@ -113,11 +113,137 @@ a {
     width: 10px;
 }
 
+/* Form Pages */
+
+#form-body {
+    display: flex;
+    flex-direction: row;
+}
+
+#left-col {
+    width: 45%;
+    height: 100%;
+    background-image: url('assets/left-col-image.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+#right-col {
+    /* Layout */
+    height: 100%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 0 27px;
+
+    /* Style */
+    background-color: var(--background);
+}
+
+#extension-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns */
+    grid-template-rows: repeat(2, 1fr);
+    /* 2 rows */
+    gap: 20px;
+    /* Gap between grid items */
+    width: 506px;
+    border: none;
+}
+
+.option {
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+
+    /* Style */
+    background: #fff;
+    border: 1px solid var(--stroke);
+    border-radius: 12px;
+}
+
+.option:hover {
+    cursor: pointer;
+}
+
+.option img {
+    height: 60px;
+}
+
+.opt-title {
+    color: #000;
+    text-align: center;
+    font-family: Aeonik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.opt-subtitle {
+    color: var(--inactive);
+    text-align: center;
+    font-family: Aeonik;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+}
+
+.opt-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.option input[type="radio"] {
+    /* Hide the radio */
+    display: none;
+}
+
+.option input[type="radio"]:checked~.opt-text .opt-title {
+    color: var(--button);
+}
+
+
+.form-btn-primary {
+    /* Layout */
+    padding: 18px 50px;
+    align-self: flex-end;
+
+    /* Style */
+    border-radius: 12px;
+    background: var(--Brand-Primary, #3399FD);
+    box-shadow: 0px 0px 8px 0px rgba(51, 153, 253, 0.24);
+    border: none;
+    cursor: pointer;
+
+    /* Typography */
+    color: #FFF;
+    text-align: center;
+    font-family: Aeonik;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+}
 
 /*  Mobile Optimisation  */
 @media only screen and (max-width: 600px) {
 
-    body {
+    #intro-body {
         padding: 30px;
     }
 
