@@ -32,7 +32,7 @@
 
         <section id="question-1" class="inner-content question active">
 
-            <div class="question-intro">
+            <div class="intro">
                 <h1>Start Your Vision</h1>
                 <p>Choose the extension type that best embodies your aspirations.</p>
             </div>
@@ -46,7 +46,7 @@
             <fieldset id="extension-options">
 
                 <label class="option-grid-item">
-                    <input type="radio" name="extension" value="single_story_side" />
+                    <input type="radio" name="extension" value="1.1" data-value="Single Storey (side)" />
                     <img src="assets/single-storey-side.svg">
                     <div class="opt-text">
                         <span class="opt-title">Single Storey</span>
@@ -55,7 +55,7 @@
                 </label>
 
                 <label class="option-grid-item">
-                    <input type="radio" name="extension" value="double_story_side" />
+                    <input type="radio" name="extension" value="1.3" data-value="Double Storey (side)" />
                     <img src="assets/double-storey-side.svg">
                     <div class="opt-text">
                         <span class="opt-title">Double Storey</span>
@@ -64,7 +64,7 @@
                 </label>
 
                 <label class="option-grid-item">
-                    <input type="radio" name="extension" value="single_story_rear" />
+                    <input type="radio" name="extension" value="1" data-value="Single Storey (rear)" />
                     <img src="assets/single-storey-rear.svg">
                     <div class="opt-text">
                         <span class="opt-title">Single Storey</span>
@@ -73,7 +73,7 @@
                 </label>
 
                 <label class="option-grid-item">
-                    <input type="radio" name="extension" value="double_story_rear" />
+                    <input type="radio" name="extension" value="1.3" data-value="Double Storey (rear)" />
                     <img src="assets/double-storey-rear.svg">
                     <div class="opt-text">
                         <span class="opt-title">Double Storey</span>
@@ -82,7 +82,7 @@
                 </label>
 
                 <label class="option-grid-item">
-                    <input type="radio" name="extension" value="loft-conversion" />
+                    <input type="radio" name="extension" value="0.8" data-value="Loft Conversion" />
                     <img src="assets/loft-conversion.svg">
                     <div class="opt-text">
                         <span class="opt-title">Loft Conversion</span>
@@ -90,7 +90,7 @@
                 </label>
 
                 <label class="option-grid-item">
-                    <input type="radio" name="extension" value="basement" />
+                    <input type="radio" name="extension" value="2" data-value="basement"/>
                     <img src="assets/basement.svg">
                     <div class="opt-text">
                         <span class="opt-title">Basement</span>
@@ -104,7 +104,7 @@
 
         <section id="question-2" class="inner-content question">
 
-            <div class="question-intro">
+            <div class="intro">
                 <h1>Select Project Size</h1>
                 <p>Choose the extension type that best embodies your aspirations.</p>
             </div>
@@ -118,7 +118,7 @@
             <fieldset id="size-options">
 
                 <label class="option-row-item">
-                    <input type="radio" name="size" value="small_30sqm" />
+                    <input type="radio" name="size" value="30" data-value="Small (30 sqm)"/>
 
                         <span class="opt-title">Small</span>
                         <span class="opt-subtitle">(30 sqm)</span>
@@ -126,13 +126,13 @@
                 </label>
 
                 <label class="option-row-item">
-                    <input type="radio" name="size" value="medium_45sqm" />
+                    <input type="radio" name="size" value="45" data-value="Medium (45 sqm)" />
                         <span class="opt-title">Medium</span>
                         <span class="opt-subtitle">(45 sqm)</span>
                 </label>
 
                 <label class="option-row-item">
-                    <input type="radio" name="size" value="large_60sqm" />
+                    <input type="radio" name="size" value="60" data-value="Large (60 sqm)" />
 
                         <span class="opt-title">Large</span>
                         <span class="opt-subtitle">(60 sqm)</span>
@@ -140,7 +140,7 @@
                 </label>
 
                 <label class="option-row-item">
-                    <input type="radio" name="size" value="extra_large_100sqm" />
+                    <input type="radio" name="size" value="100" data-value="Extra Large (100 sqm)" />
                         <span class="opt-title">Extra Large</span>
                         <span class="opt-subtitle">(100 sqm)</span>
                 </label>
@@ -156,7 +156,7 @@
 
         <section id="question-3" class="inner-content question">
 
-            <div class="question-intro">
+            <div class="intro">
                 <h1>Select Your Desired Finish</h1>
                 <p>This helps predict the extensiveness of your project based on your desired level of finish.</p>
             </div>
@@ -170,7 +170,7 @@
             <fieldset id="finish-options">
 
                 <label class="option-row-item">
-                    <input type="radio" name="finish" value="budget" />
+                    <input type="radio" name="finish" value="0.7" data-value="Budget" />
                         <div class="opt-text">
                             <span class="opt-title">Budget</span>
                             <span class="opt-subtitle">Focuses on affordability and functionality.</span>
@@ -178,7 +178,7 @@
                 </label>
 
                 <label class="option-row-item">
-                    <input type="radio" name="finish" value="standard" />
+                    <input type="radio" name="finish" value="1" data-value="Standard" />
                         <div class="opt-text">
                             <span class="opt-title">Standard</span>
                             <span class="opt-subtitle">Aims for a balance between value and quality.</span>
@@ -186,7 +186,7 @@
                 </label>
 
                 <label class="option-row-item">
-                    <input type="radio" name="finish" value="standard" />
+                    <input type="radio" name="finish" value="Premium" data-value="1.2" />
                         <div class="opt-text">
                             <span class="opt-title">Premium</span>
                             <span class="opt-subtitle">Prioritizes premium materials and high-quality finishes.</span>
@@ -198,7 +198,7 @@
             <div class="form-btns">            
                 <button class="form-btn-secondary" onclick="previousQuestion()">Back</button>
 
-                <a href="calculationResults.html" class="form-btn-primary">Submit</a>
+                <a href="yourEstimate.html" class="form-btn-primary">Submit</a>
             </div>
         </section>
     

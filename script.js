@@ -1,15 +1,6 @@
 var activeQuestion = 1;
-var progressWidth = 168.67;
-
-var userSelection = {
-    extension: "",
-    size: "",
-    finish: "",
-}
-
-$(document).ready(function () {
-    console.log("jQuery successfully loaded.")
-})
+var originalProgressWidth = $(".progress").width();
+var updatedProgressWidth = originalProgressWidth;
 
 function nextQuestion() {
     console.log("nextQuestion function called.")
@@ -19,8 +10,8 @@ function nextQuestion() {
     $("#question-" + activeQuestion).addClass("active");
 
     // Adjust Progress Bar
-    progressWidth = progressWidth + 150;
-    $(".progress").css("width", progressWidth)
+    updatedProgressWidth = updatedProgressWidth + originalProgressWidth;
+    $(".progress").width(updatedProgressWidth)
 
 
 }
@@ -32,22 +23,69 @@ function previousQuestion() {
     $("#question-" + activeQuestion).addClass("active");
 
     // Adjust Progress Bar
-    progressWidth = progressWidth - 150;
-    $(".progress").css("width", progressWidth)
+    updatedProgressWidth = updatedProgressWidth - originalProgressWidth;
+    $(".progress").width(updatedProgressWidth)
 
 }
 
 $('#extension-options input[type="radio"').on("click", function () {
-    userSelection.extension = this.value;
-    localStorage.setItem("extension", userSelection.extension);
+    localStorage.setItem("extension_name", this.dataset.value);
+    localStorage.setItem("extension_value", this.value);
 })
 
 $('#size-options input[type="radio"').on("click", function () {
-    userSelection.size = this.value;
-    localStorage.setItem("size", userSelection.size);
+    localStorage.setItem("size_name", this.dataset.value);
+    localStorage.setItem("size_value", this.value);
 })
 
 $('#finish-options input[type="radio"').on("click", function () {
-    userSelection.finish = this.value;
-    localStorage.setItem("finish", userSelection.finish);
+    localStorage.setItem("finish_name", this.dataset.value);
+    localStorage.setItem("finish_value", this.value);
 })
+
+
+if (window.location.pathname === '/') {
+
+    $(document).on('keypress', function (e) {
+        if (e.which == 13) {
+            $("#content").animate({
+                height: 'toggle',
+                opacity: 'toggle'
+            }, 'fast');
+
+            setTimeout(() => {
+                    window.location.href = "/calculatorForm.html"
+                }, 300
+
+            )
+        }
+    });
+
+}
+// Check if the current page is page2.html
+else if (window.location.pathname === '/yourEstimate.html') {
+    window.addEventListener('load', function () {
+
+        $("#extension_name").text(localStorage.getItem("extension_name"))
+        $("#extension_value").text(localStorage.getItem("extension_value"))
+
+        $("#size_name").text(localStorage.getItem("size_name"))
+        $("#size_value").text(localStorage.getItem("size_value"))
+
+        $("#finish_name").text(localStorage.getItem("finish_name"))
+        $("#finish_value").text(localStorage.getItem("finish_value"))
+
+        function calculateExtensionRange() {
+            const lowRange = (((1400 * localStorage.getItem("size_value")) * localStorage.getItem("extension_value")) * localStorage.getItem("finish_value")) * 0.8;
+            const highRange = (((1400 * localStorage.getItem("size_value")) * localStorage.getItem("extension_value")) * localStorage.getItem("size_value")) * 1.1;
+
+            return [lowRange, highRange]
+        }
+
+        const extensionRange = calculateExtensionRange();
+
+        $("#low_estimate_calc").text(extensionRange[0].toLocaleString("en-US"));
+        $("#high_estimate_calc").text(extensionRange[1].toLocaleString("en-US"));
+
+    });
+}

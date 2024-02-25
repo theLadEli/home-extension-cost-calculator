@@ -1,0 +1,87 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Extension Cost Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/buildbuddy-icon.png">
+
+    <!-- Google Font: Nunito Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+
+    <!-- Customised Social Sharing -->
+    <meta property="og:title" content="Get Your FREE Home Extension Cost Estimate! | BuildBuddy">
+    <meta property="og:description"
+        content="Ready to transform your home with a stunning extension? Before diving into design details and contractor meetings, unlock a simple cost breakdown with our smart calculator!">
+    <meta property="og:image"
+        content="https://github.com/theLadEli/home-extension-cost-calculator/blob/main/assets/social-share-image.png?raw=true">
+</head>
+
+<body id="your-estimate">
+
+    <section id="inner-section">
+
+        <section id="profile-sidebar" class="sidebar">
+
+            <div class="sidebar-top-section">
+                <img src="assets/logo.svg" alt="BuildBuddy Logo">
+                <hr>
+    
+                <div id="project-details">
+                    <h3>Project Details</h3>
+    
+                </div>
+            </div>
+
+            <div class="sidebar-sign-in-card">
+                <div>
+                    <img src="assets/profile-image.svg" alt="Default user profile picture">
+                    Sign In
+                </div>
+
+                <img src="assets/chevron-right.svg">
+            </div>
+        </section>
+    
+        <section id="your-estimate-main">    
+            <p>Extension Name:</p>
+            <div id="extension_name"></div>
+        
+            <p>Extension Value:</p>
+            <div id="extension_value"></div>
+            
+            <p>Size Name:</p>
+            <div id="size_name"></div>
+            
+            <p>Size Value:</p>
+            <div id="size_value"></div>
+            
+            <p>Finish Name:</p>
+            <div id="finish_name"></div>
+        
+            <p>Finish Value:</p>
+            <div id="finish_value"></div>
+        
+            <p>Your Estimated Range:</p>
+            <p>Low:</p>
+            <h1 id="low_estimate_calc"></h1>
+        
+            <p>High</p>
+            <h1 id="high_estimate_calc"></h1>
+        </section>
+    
+        <section id="knowledge-sidebar" class="sidebar">
+        </section>
+
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

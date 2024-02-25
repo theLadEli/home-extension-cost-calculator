@@ -31,14 +31,6 @@
     padding: 0;
 }
 
-#intro-body {
-    background: var(--background);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
 h1 {
     font-family: Aeonik, sans-serif;
     font-weight: bold;
@@ -75,6 +67,16 @@ a {
     color: #fff;
 }
 
+/* Intro Page */
+
+#intro-body {
+    background: var(--background);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 #content {
     max-width: 660px;
     text-align: center;
@@ -86,9 +88,10 @@ a {
 .intro {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
 }
-
 
 #ctas {
     display: flex;
@@ -102,9 +105,6 @@ a {
     flex-direction: row;
     justify-content: center;
     gap: 10px;
-}
-
-#keypress-indicator {
     font-size: 14px;
     line-height: 14px;
 }
@@ -123,6 +123,7 @@ a {
 #left-col {
     width: 45%;
     height: 100%;
+
     background-image: url('assets/left-col-image.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -151,15 +152,6 @@ a {
     gap: 30px;
 }
 
-.question-intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    text-align: center;
-}
-
 .progress-bar {
     background: #fff;
     width: 100%;
@@ -169,7 +161,7 @@ a {
 
 .progress {
     height: 10px;
-    width: 168.67;
+    width: 150px;
     background: var(--button);
     border-radius: 20px;
     box-shadow: 0px 0px 8px 0px rgba(51, 153, 253, 0.24);
@@ -178,9 +170,7 @@ a {
 #extension-options {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* 3 columns */
     grid-template-rows: repeat(2, 1fr);
-    /* 2 rows */
     gap: 20px;
     border: none;
 }
@@ -200,12 +190,12 @@ a {
     border-radius: 12px;
 }
 
-.option-grid-item:hover {
-    cursor: pointer;
-}
-
 .option-grid-item img {
     height: 60px;
+}
+
+.option-grid-item:hover {
+    cursor: pointer;
 }
 
 .option-grid-item .opt-title {
@@ -234,6 +224,7 @@ a {
     align-items: center;
     justify-content: center;
     gap: 4px;
+    text-align: left;
 }
 
 .option-grid-item input[type="radio"] {
@@ -241,7 +232,8 @@ a {
     display: none;
 }
 
-.option-grid-item input[type="radio"]:checked~.opt-text .opt-title {
+input[type="radio"]:checked~.opt-text .opt-title, input[type="radio"]:checked~ .opt-title {
+    /* Set title blue on click */
     color: var(--button);
 }
 
@@ -335,6 +327,7 @@ a {
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
+    text-align: left;
 }
 
 .form-btns {
@@ -344,17 +337,60 @@ a {
     align-content: center;
 }
 
-.option-row-item .opt-text {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-}
-
 #finish-options {
     border: none;
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+#finish-options .option-row-item {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px 25px 20px 25px;
+}
+
+#finish-options .opt-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Your Estimate Page */
+
+#your-estimate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+}
+
+#inner-section {
+    max-width: 1280px;
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    border-radius: 12;
+    gap: 30px;
+}
+
+.sidebar {
+    height: 660px;
+    background: #fff;
+    border-radius: 12px;
+}
+
+#profile-sidebar {
+    width: 340px;
+}
+
+#knowledge-sidebar {
+    width: 285px;
+}
+
+#your-estimate-main {
+    width: 535px;
 }
 
 /*  Mobile Optimisation  */
@@ -377,7 +413,10 @@ a {
     #form-body {
         display: flex;
         flex-direction: column;
-        overflow-x: hidden;
+    }
+
+    .intro {
+        gap: 10px;
     }
 
     #left-col {
@@ -386,23 +425,36 @@ a {
     }
 
     #right-col {
-        width: 100%;
-        overflow-x: hidden;
+        height: fit-content;
+        width: unset;
+        padding: 50px 30px;
+    }
+
+    .inner-content {
+        width: unset;
+    }
+
+    .progress {
+        width: 100px;
     }
 
     #extension-options {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        /* 2 rows */
-        gap: 20px;
-        border: none;
+        gap: 15px;
     }
-
-    .inner-content {
-        width: auto;
-    }
-
     
+    #extension-options img {
+        height: 40px;
+    }
+
+    #size-options {
+        gap: 15px
+    }
+
+    #finish-options .option-row-item {
+        width: unset;
+    }
 
 }
