@@ -43,7 +43,7 @@ $('#finish-options input[type="radio"').on("click", function () {
     localStorage.setItem("finish_value", this.value);
 })
 
-if (window.location.pathname === '/index.html' || window.location.pathname === '/home-extension-cost-calculator' || window.location.pathname === '/') {
+if (window.location.pathname === '/index.html') {
 
     $(document).on('keypress', function (e) {
         if (e.which == 13) {
@@ -64,17 +64,15 @@ if (window.location.pathname === '/index.html' || window.location.pathname === '
     window.addEventListener('load', function () {
 
         $("#extension_name").text(localStorage.getItem("extension_name"))
-        $("#extension_value").text(localStorage.getItem("extension_value"))
 
         $("#size_name").text(localStorage.getItem("size_name"))
-        $("#size_value").text(localStorage.getItem("size_value"))
 
         $("#finish_name").text(localStorage.getItem("finish_name"))
-        $("#finish_value").text(localStorage.getItem("finish_value"))
 
         function calculateExtensionRange() {
             const lowRange = (((1400 * localStorage.getItem("size_value")) * localStorage.getItem("extension_value")) * localStorage.getItem("finish_value")) * 0.8;
-            const highRange = (((1400 * localStorage.getItem("size_value")) * localStorage.getItem("extension_value")) * localStorage.getItem("size_value")) * 1.1;
+
+            const highRange = (((1400 * localStorage.getItem("size_value")) * localStorage.getItem("extension_value")) * localStorage.getItem("finish_value")) * 1.1;
 
             return [lowRange, highRange]
         }

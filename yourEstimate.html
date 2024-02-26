@@ -31,51 +31,117 @@
             <div class="sidebar-top-section">
                 <img src="assets/logo.svg" alt="BuildBuddy Logo">
                 <hr>
-    
+
                 <div id="project-details">
                     <h3>Project Details</h3>
-    
+
+                    <div id="pd_table">
+                        <div class="pd_trow">
+                            <p class="pd_name">Project Type</p>
+                            <p id="extension_name" class="pd_value"></p>
+                        </div>
+                        <div class="pd_trow">
+                            <p class="pd_name">Extension Size</p>
+                            <p id="size_name" class="pd_value"></p>
+                        </div>
+                        <div class="pd_trow">
+                            <p class="pd_name">Quality Finish</p>
+                            <p id="finish_name" class="pd_value"></p>
+                        </div>
+                    </div>
+
+                    <a href="/calculatorForm.html">
+                        Edit Details
+                        <img src="assets/pencil.svg" alt="Edit icon">
+                    </a>
                 </div>
             </div>
 
-            <div class="sidebar-sign-in-card">
+            <a href="https://app.buildbuddy.co/login" class="sidebar-sign-in-card">
                 <div>
                     <img src="assets/profile-image.svg" alt="Default user profile picture">
                     Sign In
                 </div>
 
                 <img src="assets/chevron-right.svg">
-            </div>
+            </a>
         </section>
-    
-        <section id="your-estimate-main">    
-            <p>Extension Name:</p>
-            <div id="extension_name"></div>
-        
-            <p>Extension Value:</p>
-            <div id="extension_value"></div>
-            
-            <p>Size Name:</p>
-            <div id="size_name"></div>
-            
-            <p>Size Value:</p>
-            <div id="size_value"></div>
-            
-            <p>Finish Name:</p>
-            <div id="finish_name"></div>
-        
-            <p>Finish Value:</p>
-            <div id="finish_value"></div>
-        
+
+        <section id="your-estimate-main">
+
+            <div class="inner-content">
+
+                <div class="intro">
+                    <h2>Your Personalized Cost Breakdown</h2>
+                    <p>Congratulations on taking the first step towards your dream extension! Based on your selections,
+                        here's a preliminary breakdown of potential costs:
+                    </p>
+                </div>
+
+                <div id="donut-breakdown">
+
+                    <img src="assets/donut-graph.svg">
+
+                    <div class="db-categories">
+
+                        <div class="db-bullets">
+                            <div class="db-bullet-icon yellow"></div>
+                            Build Stage
+                        </div>
+                        <div class="db-bullets">
+                            <div class="db-bullet-icon red"></div>
+                            Fit-out
+                        </div>
+                        <div class="db-bullets">
+                            <div class="db-bullet-icon blue"></div>
+                            Pre-build
+                        </div>
+                        <div class="db-bullets">
+                            <div class="db-bullet-icon green"></div>
+                            Design & Planning
+                        </div>
+                        <div class="db-bullets">
+                            <div class="db-bullet-icon purple"></div>
+                            Completion
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
             <p>Your Estimated Range:</p>
             <p>Low:</p>
             <h1 id="low_estimate_calc"></h1>
-        
+
             <p>High</p>
             <h1 id="high_estimate_calc"></h1>
         </section>
-    
+
         <section id="knowledge-sidebar" class="sidebar">
+
+            <div class="knowledge-card">
+                <h4>Is my estimate accurate?</h4>
+                <p>This is a preliminary estimate based on general averages. It's a great starting point, but if you’d
+                    like a more detailed estimate, proceed to registration.</p>
+            </div>
+            <div class="knowledge-card">
+                <h4>What’s included in the estimate?</h4>
+                <p>Your estimate breaks down costs into 5 key categories. For a detailed, personalized quote, register
+                    and access our budget tool!</p>
+            </div>
+            <div class="knowledge-card">
+                <h4>How do I keep to my budget?</h4>
+                <p>By joining BuildBuddy, you gain access to a comprehensive suite of tools dedicated to keeping your
+                    extension finances in check throughout the process.</p>
+            </div>
+            <div class="knowledge-card">
+                <h4>What if I go over budget?</h4>
+                <p>Unexpected costs happen! Built-in buffers help, and if needed, Buildbuddy can guide you on trimming
+                    expenses and finding alternative and more affordable solutions.</p>
+            </div>
+
         </section>
 
     </section>
