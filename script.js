@@ -43,8 +43,7 @@ $('#finish-options input[type="radio"').on("click", function () {
     localStorage.setItem("finish_value", this.value);
 })
 
-
-if (window.location.pathname === '/index.html' || window.location.pathname === '/home-extension-cost-calculator') {
+if (window.location.pathname === '/index.html') {
 
     $(document).on('keypress', function (e) {
         if (e.which == 13) {
@@ -63,7 +62,7 @@ if (window.location.pathname === '/index.html' || window.location.pathname === '
 
 }
 // Check if the current page is page2.html
-else if (window.location.pathname === '/yourEstimate.html') {
+else if (window.location.pathname === '/yourEstimate.html' || window.location.pathname === '/home-extension-cost-calculator/yourEstimate.html') {
     window.addEventListener('load', function () {
 
         $("#extension_name").text(localStorage.getItem("extension_name"))
