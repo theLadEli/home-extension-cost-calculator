@@ -44,7 +44,7 @@ $('#finish-options input[type="radio"').on("click", function () {
 })
 
 
-if (window.location.pathname === '/') {
+if (window.location.pathname === '/index.html' || window.location.pathname === '/home-extension-cost-calculator') {
 
     $(document).on('keypress', function (e) {
         if (e.which == 13) {
