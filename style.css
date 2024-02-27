@@ -102,6 +102,12 @@ a {
     color: #fff;
 }
 
+.btn-light {
+    box-shadow: unset;
+    background: white;
+    color: var(--primary);
+}
+
 /* Intro Page */
 
 #intro-body {
@@ -397,29 +403,20 @@ input[type="radio"]:checked~.opt-title {
 
 #your-estimate {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    padding: 30px;
+    gap: 30px;
     background-color: var(--background);
 }
 
-#inner-section {
-    max-width: 1500px;
-    display: flex;
-    flex-direction: row;
-    padding: 30px;
-    border-radius: 12;
-    gap: 30px;
-}
-
 .sidebar {
-    height: 100%;
     background: #fff;
     border-radius: 12px;
 }
 
 #profile-sidebar {
-    width: 20%;
-    height: auto;
+    max-width: 300px;
+    min-width: fit-content;
     padding: 30px 35px;
     display: flex;
     flex-direction: column;
@@ -460,6 +457,7 @@ hr {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    gap: 10px;
 
 }
 
@@ -542,13 +540,14 @@ hr {
 #knowledge-sidebar {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 23.33px;
     padding: 15px;
-    height: auto;
-    width: 20%;
+    max-width: 300px;
 }
 
 .knowledge-card {
+    height: -webkit-fill-available;
     display: flex;
     flex-direction: column;
     padding: 10px 12px;
@@ -567,20 +566,39 @@ hr {
 }
 
 #your-estimate-main {
-    width: 50%;
+    padding: 30px;
+    width: -webkit-fill-available;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 40px;
+    justify-content: center;
 }
 
 #your-estimate-main .intro {
-    gap: 5px;
+    gap: 10px;
 }
+
+#your-estimate-main .inner-content {
+    gap: 40px;
+    align-items: center;
+}
+
 
 #donut-breakdown {
     padding: 0 37.5px;
     display: flex;
     flex-direction: row;
+    gap: 30px;
+    align-items: center;
+}
+
+.db-categories {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    height: fit-content;
 }
 
 .db-bullets {
@@ -588,15 +606,16 @@ hr {
     flex-direction: row;
     align-items: center;
     gap: 8px;
+    padding: 5px 0;
 
     /* Typography */
     color: #000;
     text-align: center;
     font-family: Aeonik;
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 28px;
+    line-height: 16px;
     letter-spacing: 0.14px;
 }
 
@@ -631,6 +650,93 @@ hr {
 .purple {
     background: #C9BCFF;
     border-color: #9479FF;
+}
+
+#price-range {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    justify-content: space-between;
+}
+
+.pr-item {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    /* Typography */
+    color: #000;
+    text-align: center;
+    font-family: Aeonik;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 1.2px;
+}
+
+.pr-item-value {
+    /* Style */
+    border-radius: 12px;
+    border: 1px solid var(--Stroke);
+    background: #FFF;
+    padding: 12px 20px;
+
+    /* Typography */
+    color: #000;
+    text-align: center;
+    font-family: Aeonik;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 1.08px;
+}
+
+#sign-up-banner {
+    border-radius: 12px;
+    background: var(--primary);
+    padding: 30px;
+    background-image: url("/assets/banner-bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+#sign-up-banner a {
+    padding: 10px 30px
+}
+
+.sb-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 221px;
+}
+
+.sb-inner h2 {
+    text-align: left;
+    color: white;
+    color: #FFF;
+    font-family: Aeonik;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+    text-wrap: balance;
+}
+
+.sb-inner p {
+    color: #FFF;
+    font-family: Aeonik;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.14px;
+    margin-bottom: -5px;
 }
 
 /*  Mobile Optimisation  */
