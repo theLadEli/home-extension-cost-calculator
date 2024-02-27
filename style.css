@@ -694,6 +694,10 @@ hr {
     letter-spacing: 1.08px;
 }
 
+#sign-up-banner-wrapper {
+    width: 506px;
+}
+
 #sign-up-banner {
     border-radius: 12px;
     background: var(--primary);
@@ -801,6 +805,40 @@ hr {
 
     #finish-options .option-row-item {
         width: unset;
+    }
+
+    #your-estimate {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #your-estimate-main {
+        padding: 30px 0;
+    }
+
+    #profile-sidebar {
+        padding: 25px;
+        max-width: unset;
+        width: unset;
+        min-width: unset;
+        gap: 30px;
+    }
+
+    #sign-up-banner-wrapper {
+        width: 100%;
+    }
+
+    #donut-breakdown {
+        padding: 0;
+    }
+
+    #price-range {
+        gap: 25px;
+        width: unset;
+    }
+
+    #knowledge-sidebar {
+        max-width: unset;
     }
 
 }
