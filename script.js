@@ -43,7 +43,7 @@ $('#finish-options input[type="radio"').on("click", function () {
     localStorage.setItem("finish_value", this.value);
 })
 
-if (window.location.pathname === '/index.html') {
+if (window.location.pathname === '/') {
 
     $(document).on('keypress', function (e) {
         if (e.which == 13) {
